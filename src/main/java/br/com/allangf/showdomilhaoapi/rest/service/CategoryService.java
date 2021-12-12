@@ -10,5 +10,6 @@ public interface CategoryService {
     void createNewCategory(CategoryDTO categoryDTO);
     void deleteCategoryById(int categoryid);
     List<Category> returnAllCategory();
+    Category returnCategoryById(int categoryId);
 
 }

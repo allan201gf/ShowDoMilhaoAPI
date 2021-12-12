@@ -1,10 +1,11 @@
-package br.com.allangf.showdomilhaoapi.rest.service;
+package br.com.allangf.showdomilhaoapi.rest.service.impl;
 
 import br.com.allangf.showdomilhaoapi.domain.entity.Category;
 import br.com.allangf.showdomilhaoapi.domain.exception.Errors;
 import br.com.allangf.showdomilhaoapi.domain.exception.RuleOfException;
 import br.com.allangf.showdomilhaoapi.domain.repository.CategoryRepository;
 import br.com.allangf.showdomilhaoapi.rest.dto.CategoryDTO;
+import br.com.allangf.showdomilhaoapi.rest.service.CategoryService;
 import lombok.AllArgsConstructor;
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.stereotype.Service;
@@ -47,4 +48,8 @@ public class CategoryServiceImpl implements CategoryService {
         return categoryRepository.findAll();
     }
 
+    @Override
+    public Category returnCategoryById(int categoryId) {
+            return categoryRepository.findById(categoryId).orElseThrow(() -> new RuleOfException(Errors.CATEGORY_NOT_FOUND));
+    }
 }

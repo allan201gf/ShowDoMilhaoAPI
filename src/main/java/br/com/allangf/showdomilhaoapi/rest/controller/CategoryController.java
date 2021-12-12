@@ -3,7 +3,6 @@ package br.com.allangf.showdomilhaoapi.rest.controller;
 import br.com.allangf.showdomilhaoapi.domain.entity.Category;
 import br.com.allangf.showdomilhaoapi.rest.dto.CategoryDTO;
 import br.com.allangf.showdomilhaoapi.rest.service.CategoryService;
-import br.com.allangf.showdomilhaoapi.rest.service.CategoryServiceImpl;
 import io.swagger.annotations.ApiOperation;
 import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
